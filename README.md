@@ -14,3 +14,4 @@ There are no code listings in this chapter.
    * Express: [Full source](../../tree/02-express) | [Diffs from previous step](../../compare/02-server-less-hello-world...02-express)
    * Separate script file: [Full source](../../tree/02-separate-script-file) | [Diffs from previous step](../../compare/02-express...02-separate-script-file)
    * Transform: [Full source](../../tree/02-transform) | [Diffs from previous step](../../compare/02-separate-script-file...02-transform)
+   * Automate: [Full source](../../tree/02-automate) | [Diffs from previous step](../../compare/transform...02-automate)
