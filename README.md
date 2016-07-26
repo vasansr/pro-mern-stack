@@ -15,3 +15,4 @@ There are no code listings in this chapter.
    * Separate script file: [Full source](../../tree/02-separate-script-file) | [Diffs from previous step](../../compare/02-express...02-separate-script-file)
    * Transform: [Full source](../../tree/02-transform) | [Diffs from previous step](../../compare/02-separate-script-file...02-transform)
    * Automate: [Full source](../../tree/02-automate) | [Diffs from previous step](../../compare/02-transform...02-automate)
+   * ES2015:  [Full source](../../tree/02-es2015) | [Diffs from previous step](../../compare/02-automate...02-es2015)
