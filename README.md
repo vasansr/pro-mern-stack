@@ -10,5 +10,4 @@ There are no code listings in this chapter.
 
 ### Chapter 2: Hello World
 
-   * Server-less Hello World: [Full source](../../tree/server-less-hello-world)
- 
+   * Server-less Hello World: [Full source](../../tree/02-server-less-hello-world)
