@@ -25,5 +25,9 @@
   "homepage": "https://github.com/vasansr/pro-mern-stack#readme",
   "dependencies": {
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.11.4",
+    "babel-preset-react": "^6.11.1"
   }
 }
