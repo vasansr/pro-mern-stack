@@ -16,3 +16,6 @@ There are no code listings in this chapter.
    * Transform: [Full source](../../tree/02-transform) | [Diffs from previous step](../../compare/02-separate-script-file...02-transform)
    * Automate: [Full source](../../tree/02-automate) | [Diffs from previous step](../../compare/02-transform...02-automate)
    * ES2015:  [Full source](../../tree/02-es2015) | [Diffs from previous step](../../compare/02-automate...02-es2015)
+
+### Chapter 3: React Components
+   * React Classes:  [Full source](../../tree/03-react-classes) | [Diffs from previous step](../../compare/02-es2015...03-react-classes)
