@@ -19,3 +19,4 @@ There are no code listings in this chapter.
 
 ### Chapter 3: React Components
    * React Classes:  [Full source](../../tree/03-react-classes) | [Diffs from previous step](../../compare/02-es2015...03-react-classes)
+   * Composing Components:  [Full source](../../tree/03-composing-components) | [Diffs from previous step](../../compare/03-react-classes...03-composing-components)
