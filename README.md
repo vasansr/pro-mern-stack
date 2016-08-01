@@ -22,3 +22,4 @@ There are no code listings in this chapter.
    * Composing Components:  [Full source](../../tree/03-composing-components) | [Diffs from previous step](../../compare/03-react-classes...03-composing-components)
    * Passing Data - Using Properties: [Full source](../../tree/03-passing-data--using-properties) | [Diffs from previous step](../../compare/03-composing-components...03-passing-data--using-properties)
    * Passing Data - Using Children: [Full source](../../tree/03-passing-data--using-children) | [Diffs from previous step](../../compare/03-passing-data--using-properties...03-passing-data--using-children)
+   * Dynamic Composition: [Full source](../../tree/03-dynamic-composition) | [Diffs from previous step](../../compare/03-passing-data--using-children...03-dynamic-composition)
