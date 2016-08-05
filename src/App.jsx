@@ -27,7 +27,6 @@ class IssueRow extends React.Component {
 
 class IssueTable extends React.Component {
   render() {
-    console.log("IssueTable render called", this.props.issues.length);
     const issueRows = this.props.issues.map(issue => <IssueRow key={issue.id} issue={issue} />)
     return (
       <table className="bordered-table">
