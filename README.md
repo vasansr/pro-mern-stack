@@ -27,3 +27,4 @@ There are no code listings in this chapter.
 ### Chapter 4: React State
    * Setting State: [Full source](../../tree/04-setting-state) | [Diffs from previous step](../../compare/03-dynamic-composition...04-setting-state)
    * Async State Initialization: [Full source](../../tree/04-async-state-initialization) | [Diffs from previous step](../../compare/04-setting-state...04-async-state-initialization)
+   * Event Handling: [Full source](../../tree/04-event-handling) | [Diffs from previous step](../../compare/04-async-state-initialization...04-event-handling)
