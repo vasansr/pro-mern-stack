@@ -27,6 +27,7 @@ class IssueRow extends React.Component {
 
 class IssueTable extends React.Component {
   render() {
+    console.log("IssueTable render called", this.props.issues.length);
     const issueRows = this.props.issues.map(issue => <IssueRow key={issue.id} issue={issue} />)
     return (
       <table className="bordered-table">
@@ -69,13 +70,34 @@ const issues = [
 ];
 
 class IssueList extends React.Component {
+  constructor() {
+    super();
+    this.state = { issues: issues };
+
+    setTimeout(this.createTestIssue.bind(this), 2000);
+  }
+
+  createIssue(newIssue) {
+    const newIssues = this.state.issues.slice();
+    newIssues.push(newIssue);
+    this.setState({ issues: newIssues });
+  }
+
+  createTestIssue() {
+    const id = this.state.issues.length + 1;
+    this.createIssue({
+      id: id, status: 'New', owner: 'Pieta', created: new Date(),
+      title: 'Completion date should be optional',
+    });
+  }
+
   render() {
     return (
       <div>
         <h1>Issue Tracker</h1>
         <IssueFilter />
         <hr />
-        <IssueTable issues={issues} />
+        <IssueTable issues={this.state.issues} />
         <hr />
         <IssueAdd />
       </div>

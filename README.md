@@ -23,3 +23,6 @@ There are no code listings in this chapter.
    * Passing Data - Using Properties: [Full source](../../tree/03-passing-data--using-properties) | [Diffs from previous step](../../compare/03-composing-components...03-passing-data--using-properties)
    * Passing Data - Using Children: [Full source](../../tree/03-passing-data--using-children) | [Diffs from previous step](../../compare/03-passing-data--using-properties...03-passing-data--using-children)
    * Dynamic Composition: [Full source](../../tree/03-dynamic-composition) | [Diffs from previous step](../../compare/03-passing-data--using-children...03-dynamic-composition)
+
+### Chapter 4: React State
+   * Setting State: [Full source](../../tree/04-setting-state) | [Diffs from previous step](../../compare/03-dynamic-composition...04-setting-state)
