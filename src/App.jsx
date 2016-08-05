@@ -78,14 +78,14 @@ class IssueList extends React.Component {
 
   createIssue(newIssue) {
     const newIssues = this.state.issues.slice();
+    newIssue.id = this.state.issues.length + 1;
     newIssues.push(newIssue);
     this.setState({ issues: newIssues });
   }
 
   createTestIssue() {
-    const id = this.state.issues.length + 1;
     this.createIssue({
-      id: id, status: 'New', owner: 'Pieta', created: new Date(),
+      status: 'New', owner: 'Pieta', created: new Date(),
       title: 'Completion date should be optional',
     });
   }
