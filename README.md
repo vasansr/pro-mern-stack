@@ -30,3 +30,6 @@ There are no code listings in this chapter.
    * Event Handling: [Full source](../../tree/04-event-handling) | [Diffs from previous step](../../compare/04-async-state-initialization...04-event-handling)
    * Communicate Child to Parent: [Full source](../../tree/04-communicate-child-to-parent) | [Diffs from previous step](../../compare/04-event-handling...04-communicate-child-to-parent)
    * Stateless Components: [Full source](../../tree/04-stateless-components) | [Diffs from previous step](../../compare/04-communicate-child-to-parent...04-stateless-components)
+
+### Chapter 5: Express REST APIs
+   * List API: [Full source](../../tree/05-list-api) | [Diffs from previous step](../../compare/04-stateless-components...05-list-api)
