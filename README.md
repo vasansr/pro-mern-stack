@@ -34,3 +34,4 @@ There are no code listings in this chapter.
 ### Chapter 5: Express REST APIs
    * List API: [Full source](../../tree/05-list-api) | [Diffs from previous step](../../compare/04-stateless-components...05-list-api)
    * Create API: [Full source](../../tree/05-create-api) | [Diffs from previous step](../../compare/05-list-api...05-create-api)
+   * Using List API: [Full source](../../tree/05-using-list-api) | [Diffs from previous step](../../compare/05-create-api...05-using-list-api)
