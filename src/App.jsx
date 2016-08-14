@@ -114,7 +114,7 @@ class IssueList extends React.Component {
       const newIssues = this.state.issues.concat(updatedIssue);
       this.setState({ issues: newIssues });
     }).catch(err => {
-      alert("Failed to add issue: " + err.message);
+      alert("Error in sending data to server: " + err.message);
     });
   }
 
