@@ -37,3 +37,6 @@ There are no code listings in this chapter.
    * Using List API: [Full source](../../tree/05-using-list-api) | [Diffs from previous step](../../compare/05-create-api...05-using-list-api)
    * Using Create API: [Full source](../../tree/05-using-create-api) | [Diffs from previous step](../../compare/05-using-list-api...05-using-create-api)
    * Error Handling: [Full source](../../tree/05-error-handling) | [Diffs from previous step](../../compare/05-using-create-api...05-error-handling)
+
+### Chapter 6: Using MongoDB
+   * Schema Initialization: [Full source](../../tree/06-schema-initialization) | [Diffs from previous step](../../compare/05-error-handling...06-schema-initialization)
