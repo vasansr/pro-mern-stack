@@ -2,6 +2,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
 app.use(express.static('static'));
@@ -21,8 +22,10 @@ const issues = [
 ];
 
 app.get('/api/issues', (req, res) => {
-  const metadata = { total_count: issues.length };
-  res.json({ _metadata: metadata, records: issues });
+  db.collection('issues').find().toArray().then(issues => {
+    const metadata = { total_count: issues.length };
+    res.json({ _metadata: metadata, records: issues })
+  });
 });
 
 const validIssueStatus = {
@@ -77,6 +80,12 @@ app.post('/api/issues', (req, res) => {
   res.json(newIssue);
 });
 
-app.listen(3000, () => {
-  console.log('App started on port 3000');
+let db;
+MongoClient.connect('mongodb://localhost/issuetracker').then(connection => {
+  db = connection;
+  app.listen(3000, () => {
+    console.log('App started on port 3000');
+  });
+}).catch(error => {
+  console.log('ERROR:', err);
 });
