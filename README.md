@@ -42,3 +42,4 @@ There are no code listings in this chapter.
    * Schema Initialization: [Full source](../../tree/06-schema-initialization) | [Diffs from previous step](../../compare/05-error-handling...06-schema-initialization)
    * MongoDB Node.js Driver: [Full source](../../tree/06-mongodb-nodejs-driver) | [Diffs from previous step](../../compare/06-schema-initialization...06-mongodb-nodejs-driver)
    * Read From MongoDB: [Full source](../../tree/06-read-from-mongodb) | [Diffs from previous step](../../compare/06-mongodb-nodejs-driver...06-read-from-mongodb)
+   * Write to MongoDB: [Full source](../../tree/06-write-to-mongodb) | [Diffs from previous step](../../compare/06-read-from-mongodb...06-write-to-mongodb)
