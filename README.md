@@ -43,3 +43,6 @@ There are no code listings in this chapter.
    * MongoDB Node.js Driver: [Full source](../../tree/06-mongodb-nodejs-driver) | [Diffs from previous step](../../compare/06-schema-initialization...06-mongodb-nodejs-driver)
    * Read From MongoDB: [Full source](../../tree/06-read-from-mongodb) | [Diffs from previous step](../../compare/06-mongodb-nodejs-driver...06-read-from-mongodb)
    * Write to MongoDB: [Full source](../../tree/06-write-to-mongodb) | [Diffs from previous step](../../compare/06-read-from-mongodb...06-write-to-mongodb)
+
+### Chapter 7: Modularize Using Webpack
+   * Server-Side Modules: [Full source](../../tree/07-server-side-modules) | [Diffs from previous step](../../compare/06-read-from-mongodb...07-server-side-modules)
