@@ -46,3 +46,4 @@ There are no code listings in this chapter.
 
 ### Chapter 7: Modularize Using Webpack
    * Server-Side Modules: [Full source](../../tree/07-server-side-modules) | [Diffs from previous step](../../compare/06-write-to-mongodb...07-server-side-modules)
+   * Using Webpack Manuall: [Full source](../../tree/07-using-webpack-manually) | [Diffs from previous step](../../compare/07-server-side-modules...07-using-webpack-manually)
