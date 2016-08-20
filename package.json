@@ -4,7 +4,7 @@
   "description": "Pro MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w '*.js' server.js",
+    "start": "nodemon -w server.js server.js",
     "compile": "babel src --presets react,es2015 --out-dir static",
     "watch": "babel src --presets react,es2015 --out-dir static --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
