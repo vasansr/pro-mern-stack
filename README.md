@@ -50,3 +50,4 @@ There are no code listings in this chapter.
    * Transform and Bundle: [Full source](../../tree/07-transform-and-bundle) | [Diffs from previous step](../../compare/07-using-webpack-manually...07-transform-and-bundle)
    * Libraries Bundle: [Full source](../../tree/07-libraries-bundle) | [Diffs from previous step](../../compare/07-transform-and-bundle...07-libraries-bundle)
    * Hot Module Replacement: [Full source](../../tree/07-hot-module-replacement) | [Diffs from previous step](../../compare/07-libraries-bundle...07-hot-module-replacement)
+      * HMR Using Middleware: [Full source](../../tree/07-hmr-using-middleware) | [Diffs from previous step](../../compare/07-libraries-bundle...07-hmr-using-middleware)
