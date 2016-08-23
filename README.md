@@ -49,3 +49,4 @@ There are no code listings in this chapter.
    * Using Webpack Manually: [Full source](../../tree/07-using-webpack-manually) | [Diffs from previous step](../../compare/07-server-side-modules...07-using-webpack-manually)
    * Transform and Bundle: [Full source](../../tree/07-transform-and-bundle) | [Diffs from previous step](../../compare/07-using-webpack-manually...07-transform-and-bundle)
    * Libraries Bundle: [Full source](../../tree/07-libraries-bundle) | [Diffs from previous step](../../compare/07-transform-and-bundle...07-libraries-bundle)
+   * Hot Module Replacement: [Full source](../../tree/07-hot-module-replacement) | [Diffs from previous step](../../compare/07-libraries-bundle...07-hot-module-replacement)
