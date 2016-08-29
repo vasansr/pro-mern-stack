@@ -1,5 +1,3 @@
-'use strict';
-
 const validIssueStatus = {
   New: true,
   Open: true,
@@ -18,7 +16,7 @@ const issueFieldType = {
   title: 'required',
 };
 
-function validateIssue(issue) {
+export function validateIssue(issue) {
   for (const field in issueFieldType) {
     const type = issueFieldType[field];
     if (!type) {
@@ -33,7 +31,3 @@ function validateIssue(issue) {
 
   return null;
 }
-
-module.exports = {
-  validateIssue: validateIssue
-};

@@ -52,3 +52,4 @@ There are no code listings in this chapter.
    * Hot Module Replacement: [Full source](../../tree/07-hot-module-replacement) | [Diffs from previous step](../../compare/07-libraries-bundle...07-hot-module-replacement)
       * HMR Using Middleware: [Full source](../../tree/07-hmr-using-middleware) | [Diffs from previous step](../../compare/07-libraries-bundle...07-hmr-using-middleware)
    * Debugging: [Full source](../../tree/07-debugging) | [Diffs from previous step](../../compare/07-hot-module-replacement...07-debugging)
+   * Server-Side ES2015: [Full source](../../tree/07-server-side-es2015) | [Diffs from previous step](../../compare/07-debugging...07-server-side-es2015)

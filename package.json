@@ -4,7 +4,10 @@
   "description": "Pro MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w server server/server.js",
+    "start": "nodemon -w dist dist/server.js",
+    "compile-server": "babel server --presets es2015-node4 --out-dir dist --source-maps",
+    "watch-server": "babel server --presets es2015-node4 --out-dir dist --source-maps --watch",
+    "start-hook": "nodemon -w server server/start_hook.js",
     "compile": "webpack",
     "watch": "webpack-dev-server --hot --inline",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,15 +30,18 @@
   },
   "homepage": "https://github.com/vasansr/pro-mern-stack#readme",
   "dependencies": {
+    "babel-polyfill": "^6.13.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
-    "mongodb": "^2.2.6"
+    "mongodb": "^2.2.6",
+    "source-map-support": "^0.4.2"
   },
   "devDependencies": {
     "babel-cli": "^6.11.4",
-    "babel-polyfill": "^6.13.0",
     "babel-preset-es2015": "^6.9.0",
+    "babel-preset-es2015-node4": "^2.1.0",
     "babel-preset-react": "^6.11.1",
+    "babel-register": "^6.14.0",
     "nodemon": "^1.10.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
