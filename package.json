@@ -10,6 +10,7 @@
     "start-hook": "nodemon -w server server/start_hook.js",
     "compile": "webpack",
     "watch": "webpack-dev-server --hot --inline",
+    "lint": "eslint --ext js,jsx src server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -44,6 +45,11 @@
     "babel-preset-es2015-node4": "^2.1.0",
     "babel-preset-react": "^6.11.1",
     "babel-register": "^6.14.0",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jsx-a11y": "^1.5.5",
+    "eslint-plugin-react": "^5.2.2",
     "nodemon": "^1.10.0",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",

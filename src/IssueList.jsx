@@ -14,10 +14,14 @@ const IssueRow = (props) => (
     <td>{props.issue.completionDate ? props.issue.completionDate.toDateString() : ''}</td>
     <td>{props.issue.title}</td>
   </tr>
-)
+);
+
+IssueRow.propTypes = {
+  issue: React.PropTypes.object.isRequired,
+};
 
 function IssueTable(props) {
-  const issueRows = props.issues.map(issue => <IssueRow key={issue._id} issue={issue} />)
+  const issueRows = props.issues.map(issue => <IssueRow key={issue._id} issue={issue} />);
   return (
     <table className="bordered-table">
       <thead>
@@ -36,6 +40,10 @@ function IssueTable(props) {
   );
 }
 
+IssueTable.propTypes = {
+  issues: React.PropTypes.array.isRequired,
+};
+
 export default class IssueList extends React.Component {
   constructor() {
     super();
@@ -52,21 +60,21 @@ export default class IssueList extends React.Component {
     fetch('/api/issues').then(response => {
       if (response.ok) {
         response.json().then(data => {
-          console.log("Total count of records:", data._metadata.total_count);
           data.records.forEach(issue => {
             issue.created = new Date(issue.created);
-            if (issue.completionDate)
+            if (issue.completionDate) {
               issue.completionDate = new Date(issue.completionDate);
+            }
           });
           this.setState({ issues: data.records });
         });
       } else {
         response.json().then(error => {
-          alert("Failed to fetch issues:" + error.message)
+          alert(`Failed to fetch issues ${error.message}`);
         });
       }
     }).catch(err => {
-      alert("Error in fetching data from server:", err);
+      alert(`Error in fetching data from server: ${err}`);
     });
   }
 
@@ -79,18 +87,19 @@ export default class IssueList extends React.Component {
       if (response.ok) {
         response.json().then(updatedIssue => {
           updatedIssue.created = new Date(updatedIssue.created);
-          if (updatedIssue.completionDate)
+          if (updatedIssue.completionDate) {
             updatedIssue.completionDate = new Date(updatedIssue.completionDate);
+          }
           const newIssues = this.state.issues.concat(updatedIssue);
           this.setState({ issues: newIssues });
         });
       } else {
         response.json().then(error => {
-          alert("Failed to add issue: " + error.message)
+          alert(`Failed to add issue: ${error.message}`);
         });
       }
     }).catch(err => {
-      alert("Error in sending data to server: " + err.message);
+      alert(`Error in sending data to server: ${err.message}`);
     });
   }
 
@@ -102,7 +111,7 @@ export default class IssueList extends React.Component {
         <hr />
         <IssueTable issues={this.state.issues} />
         <hr />
-        <IssueAdd createIssue={this.createIssue}/>
+        <IssueAdd createIssue={this.createIssue} />
       </div>
     );
   }
