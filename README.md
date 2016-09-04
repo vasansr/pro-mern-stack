@@ -57,3 +57,4 @@ There are no code listings in this chapter.
 
 ### Chapter 8: React Router
    * Simple Routing: [Full source](../../tree/08-simple-routing) | [Diffs from previous step](../../compare/07-eslint...08-simple-routing)
+   * Route Parameters: [Full source](../../tree/08-route-parameters) | [Diffs from previous step](../../compare/08-simple-routing...08-route-parameters)
