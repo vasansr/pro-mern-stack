@@ -56,4 +56,4 @@ There are no code listings in this chapter.
    * ESLint: [Full source](../../tree/07-eslint) | [Diffs from previous step](../../compare/07-server-side-es2015...07-eslint)
 
 ### Chapter 8: React Router
-   * Simple Routing [Full source](../../tree/08-simple-routing) | [Diffs from previous step](../../compare/07-eslint...08-simple-routing)
+   * Simple Routing: [Full source](../../tree/08-simple-routing) | [Diffs from previous step](../../compare/07-eslint...08-simple-routing)
