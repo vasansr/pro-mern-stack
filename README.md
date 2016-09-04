@@ -54,3 +54,6 @@ There are no code listings in this chapter.
    * Debugging: [Full source](../../tree/07-debugging) | [Diffs from previous step](../../compare/07-hot-module-replacement...07-debugging)
    * Server-Side ES2015: [Full source](../../tree/07-server-side-es2015) | [Diffs from previous step](../../compare/07-debugging...07-server-side-es2015)
    * ESLint: [Full source](../../tree/07-eslint) | [Diffs from previous step](../../compare/07-server-side-es2015...07-eslint)
+
+### Chapter 8: React Router
+   * Simple Routing [Full source](../../tree/...08-simple-routing) | [Diffs from previous step](../../compare/07-eslint...08-simple-routing)
