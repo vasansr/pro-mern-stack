@@ -10,7 +10,7 @@
     "start-hook": "nodemon -w server server/start_hook.js",
     "compile": "webpack",
     "watch": "webpack-dev-server --hot --inline",
-    "lint": "eslint --ext js,jsx src server",
+    "lint": "eslint --ext js,jsx src server webpack.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
