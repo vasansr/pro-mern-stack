@@ -59,3 +59,4 @@ There are no code listings in this chapter.
    * Simple Routing: [Full source](../../tree/08-simple-routing) | [Diffs from previous step](../../compare/07-eslint...08-simple-routing)
    * Route Parameters: [Full source](../../tree/08-route-parameters) | [Diffs from previous step](../../compare/08-simple-routing...08-route-parameters)
    * Route Query String: [Full source](../../tree/08-route-query-string) | [Diffs from previous step](../../compare/08-route-parameters...08-route-query-string)
+   * Programmatic Navigation: [Full source](../../tree/08-programmatic-navigation) | [Diffs from previous step](../../compare/08-route-query-string...08-programmatic-navigation)
