@@ -62,3 +62,6 @@ There are no code listings in this chapter.
    * Programmatic Navigation: [Full source](../../tree/08-programmatic-navigation) | [Diffs from previous step](../../compare/08-route-query-string...08-programmatic-navigation)
    * Nested Routes: [Full source](../../tree/08-nested-routes) | [Diffs from previous step](../../compare/08-programmatic-navigation...08-nested-routes)
    * Browser History: [Full source](../../tree/08-browser-history) | [Diffs from previous step](../../compare/08-nested-routes...08-browser-history)
+
+### Chapter 9: Forms
+   * More Filters in List API: [Full source](../../tree/09-more-filters-in-list-api) | [Diffs from previous step](../../compare/08-browser-history...09-more-filters-in-list-api)
