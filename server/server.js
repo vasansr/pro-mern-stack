@@ -5,7 +5,7 @@ import 'babel-polyfill';
 import path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
-import { MongoClient } from 'mongodb';
+import { MongoClient, ObjectId } from 'mongodb';
 import Issue from './issue.js';
 
 const app = express();
@@ -55,6 +55,27 @@ app.post('/api/issues', (req, res) => {
   .catch(error => {
     console.log(error);
     res.status(500).json({ message: `Internal Server Error: ${error}` });
+  });
+});
+
+app.get('/api/issues/:id', (req, res) => {
+  let issueId;
+  try {
+    issueId = new ObjectId(req.params.id);
+  } catch (error) {
+    res.status(422).json({ message: `Invalid issue ID format: ${error}` });
+    return;
+  }
+
+  db.collection('issues').find({ _id: issueId }).limit(1)
+  .next()
+  .then(issue => {
+    if (!issue) res.status(404).json({ message: `No such issue: ${issueId}` });
+    else res.json(issue);
+  })
+  .catch(error => {
+    console.log(error);
+    res.status(422).json({ message: `Internal Server Error: ${error}` });
   });
 });
 
