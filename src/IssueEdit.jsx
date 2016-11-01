@@ -10,7 +10,6 @@ export default class IssueEdit extends React.Component {
         completionDate: '', created: '',
       },
     };
-
     this.onChange = this.onChange.bind(this);
   }
 
@@ -26,8 +25,7 @@ export default class IssueEdit extends React.Component {
 
   onChange(event) {
     const issue = Object.assign({}, this.state.issue);
-    const value = event.target.value;
-    issue[event.target.name] = value;
+    issue[event.target.name] = event.target.value;
     this.setState({ issue });
   }
 
@@ -36,9 +34,9 @@ export default class IssueEdit extends React.Component {
       if (response.ok) {
         response.json().then(issue => {
           issue.created = new Date(issue.created).toDateString();
-          issue.effort = issue.effort != null ? issue.effort.toString() : '';
           issue.completionDate = issue.completionDate != null ?
             new Date(issue.completionDate).toDateString() : '';
+          issue.effort = issue.effort != null ? issue.effort.toString() : '';
           this.setState({ issue });
         });
       } else {
