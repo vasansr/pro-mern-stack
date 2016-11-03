@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
 
+import NumInput from './NumInput.jsx';
+
 export default class IssueEdit extends React.Component {
   constructor() {
     super();
     this.state = {
       issue: {
-        _id: '', title: '', status: '', owner: '', effort: '',
+        _id: '', title: '', status: '', owner: '', effort: null,
         completionDate: '', created: '',
       },
     };
@@ -23,9 +25,10 @@ export default class IssueEdit extends React.Component {
     }
   }
 
-  onChange(event) {
+  onChange(event, convertedValue) {
     const issue = Object.assign({}, this.state.issue);
-    issue[event.target.name] = event.target.value;
+    const value = (convertedValue !== undefined) ? convertedValue : event.target.value;
+    issue[event.target.name] = value;
     this.setState({ issue });
   }
 
@@ -36,7 +39,6 @@ export default class IssueEdit extends React.Component {
           issue.created = new Date(issue.created).toDateString();
           issue.completionDate = issue.completionDate != null ?
             new Date(issue.completionDate).toDateString() : '';
-          issue.effort = issue.effort != null ? issue.effort.toString() : '';
           this.setState({ issue });
         });
       } else {
@@ -69,7 +71,7 @@ export default class IssueEdit extends React.Component {
           <br />
           Owner: <input name="owner" value={issue.owner} onChange={this.onChange} />
           <br />
-          Effort: <input size={5} name="effort" value={issue.effort} onChange={this.onChange} />
+          Effort: <NumInput size={5} name="effort" value={issue.effort} onChange={this.onChange} />
           <br />
           Completion Date: <input
             name="completionDate" value={issue.completionDate} onChange={this.onChange}
