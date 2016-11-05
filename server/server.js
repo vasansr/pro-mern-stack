@@ -75,7 +75,7 @@ app.get('/api/issues/:id', (req, res) => {
   })
   .catch(error => {
     console.log(error);
-    res.status(422).json({ message: `Internal Server Error: ${error}` });
+    res.status(500).json({ message: `Internal Server Error: ${error}` });
   });
 });
 
