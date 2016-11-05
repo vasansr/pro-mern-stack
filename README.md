@@ -70,3 +70,4 @@ There are no code listings in this chapter.
    * Edit Page: [Full source](../../tree/09-edit-page) | [Diffs from previous step](../../compare/09-get-api...09-edit-page)
    * UI Components - Number Input [Full source](../../tree/09-ui-components--number-input) | [Diffs from previous step](../../compare/09-edit-page...09-ui-components--number-input)
    * UI Components - Date Input [Full source](../../tree/09-ui-components--date-input) | [Diffs from previous step](../../compare/09-ui-components--number-input...09-ui-components--date-input)
+   * Update API [Full source](../../tree/09-update-api) | [Diffs from previous step](../../compare/09-ui-components--date-input...09-update-api)
