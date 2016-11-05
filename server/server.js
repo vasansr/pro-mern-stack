@@ -97,7 +97,7 @@ app.put('/api/issues/:id', (req, res) => {
     return;
   }
 
-  db.collection('issues').update({ _id: issueId }, Issue.convertIssue(issue)).then(() =>
+  db.collection('issues').updateOne({ _id: issueId }, Issue.convertIssue(issue)).then(() =>
     db.collection('issues').find({ _id: issueId }).limit(1)
     .next()
   )
