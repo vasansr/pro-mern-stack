@@ -73,3 +73,4 @@ There are no code listings in this chapter.
    * Update API [Full source](../../tree/09-update-api) | [Diffs from previous step](../../compare/09-ui-components--date-input...09-update-api)
    * Using Update API [Full source](../../tree/09-using-update-api) | [Diffs from previous step](../../compare/09-update-api...09-using-update-api)
    * Delete API [Full source](../../tree/09-delete-api) | [Diffs from previous step](../../compare/09-using-update-api...09-delete-api)
+   * Using Delete API [Full source](../../tree/09-using-delete-api) | [Diffs from previous step](../../compare/09-delete-api...09-using-delete-api)
