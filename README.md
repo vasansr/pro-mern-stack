@@ -74,3 +74,6 @@ There are no code listings in this chapter.
    * Using Update API [Full source](../../tree/09-using-update-api) | [Diffs from previous step](../../compare/09-update-api...09-using-update-api)
    * Delete API [Full source](../../tree/09-delete-api) | [Diffs from previous step](../../compare/09-using-update-api...09-delete-api)
    * Using Delete API [Full source](../../tree/09-using-delete-api) | [Diffs from previous step](../../compare/09-delete-api...09-using-delete-api)
+
+### Chapter 10: Bootstrap
+   * Bootstrap Installation [Full source](../../tree/10-bootstrap-installation) | [Diffs from previous step](../../compare/09-using-delete-api...10-bootstrap-installation)
