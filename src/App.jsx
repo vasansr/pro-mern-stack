@@ -9,13 +9,15 @@ import IssueEdit from './IssueEdit.jsx';
 const contentNode = document.getElementById('contents');
 const NoMatch = () => <p>Page Not Found</p>;
 
-ReactDOM.render((
+const RoutedApp = () => (
   <Router history={hashHistory} >
     <Route path="/" component={IssueList} />
     <Route path="/issueEdit" component={IssueEdit} />
     <Route path="*" component={NoMatch} />
   </Router>
-), contentNode);
+);
+
+ReactDOM.render(<RoutedApp />, contentNode);
 
 if (module.hot) {
   module.hot.accept();
