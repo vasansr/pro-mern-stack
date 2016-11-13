@@ -28,7 +28,7 @@ App.propTypes = {
   children: React.PropTypes.object.isRequired,
 };
 
-ReactDOM.render((
+const RoutedApp = () => (
   <Router history={hashHistory} >
     <Redirect from="/" to="/issues" />
     <Route path="/" component={App} >
@@ -37,7 +37,9 @@ ReactDOM.render((
       <Route path="*" component={NoMatch} />
     </Route>
   </Router>
-), contentNode);
+);
+
+ReactDOM.render(<RoutedApp />, contentNode);
 
 if (module.hot) {
   module.hot.accept();
