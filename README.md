@@ -77,3 +77,4 @@ There are no code listings in this chapter.
 
 ### Chapter 10: Bootstrap
    * Bootstrap Installation [Full source](../../tree/10-bootstrap-installation) | [Diffs from previous step](../../compare/09-using-delete-api...10-bootstrap-installation)
+   * Header and Footer [Full source](../../tree/10-header-and-footer) | [Diffs from previous step](../../compare/10-bootstrap-installation...10-header-and-footer)
