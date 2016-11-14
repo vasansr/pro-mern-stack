@@ -2,7 +2,7 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, Redirect, browserHistory, withRouter } from 'react-router';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Glyphicon } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
 import IssueList from './IssueList.jsx';
@@ -18,17 +18,16 @@ const Header = () => (
     </Navbar.Header>
     <Nav>
       <LinkContainer to={{ pathname: '/issues' }}>
-        <NavItem eventKey={1}>Issues</NavItem>
+        <NavItem>Issues</NavItem>
       </LinkContainer>
       <LinkContainer to={{ pathname: '/reports' }}>
-        <NavItem eventKey={1}>Reports</NavItem>
+        <NavItem>Reports</NavItem>
       </LinkContainer>
     </Nav>
     <Nav pullRight>
-      <NavDropdown title="User" id="user-dropdown">
-        <LinkContainer to={{ pathname: '/logout' }}>
-          <MenuItem eventKey={1}>Logout</MenuItem>
-        </LinkContainer>
+      <NavItem><Glyphicon glyph="plus" /> Create Issue</NavItem>
+      <NavDropdown id="user-dropdown" title={<Glyphicon glyph="option-horizontal" />} noCaret>
+        <MenuItem>Logout</MenuItem>
       </NavDropdown>
     </Nav>
   </Navbar>
