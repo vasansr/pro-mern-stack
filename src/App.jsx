@@ -17,10 +17,10 @@ const Header = () => (
       <Navbar.Brand>Issue Tracker</Navbar.Brand>
     </Navbar.Header>
     <Nav>
-      <LinkContainer to={{ pathname: '/issues' }}>
+      <LinkContainer to="/issues">
         <NavItem>Issues</NavItem>
       </LinkContainer>
-      <LinkContainer to={{ pathname: '/reports' }}>
+      <LinkContainer to="/reports">
         <NavItem>Reports</NavItem>
       </LinkContainer>
     </Nav>
