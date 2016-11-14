@@ -145,7 +145,7 @@ export default class IssueList extends React.Component {
 
   render() {
     return (
-      <div className="container-fluid">
+      <div>
         <IssueFilter setFilter={this.setFilter} initFilter={this.props.location.query} />
         <hr />
         <IssueTable issues={this.state.issues} deleteIssue={this.deleteIssue} />
