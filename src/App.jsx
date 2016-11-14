@@ -10,11 +10,11 @@ const contentNode = document.getElementById('contents');
 const NoMatch = () => <p>Page Not Found</p>;
 
 const App = (props) => (
-  <div className="container-fluid">
+  <div>
     <div className="header">
       <h1>Issue Tracker</h1>
     </div>
-    <div className="contents">
+    <div className="container-fluid">
       {props.children}
     </div>
     <div className="footer">
