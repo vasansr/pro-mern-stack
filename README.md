@@ -78,3 +78,4 @@ There are no code listings in this chapter.
 ### Chapter 10: Bootstrap
    * Bootstrap Installation [Full source](../../tree/10-bootstrap-installation) | [Diffs from previous step](../../compare/09-using-delete-api...10-bootstrap-installation)
    * Navigation [Full source](../../tree/10-navigation) | [Diffs from previous step](../../compare/10-bootstrap-installation...10-navigation)
+   * Table and Panel [Full source](../../tree/10-table-and-panel) | [Diffs from previous step](../../compare/10-navigation...10-table-and-panel)
