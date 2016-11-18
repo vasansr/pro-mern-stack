@@ -81,3 +81,4 @@ There are no code listings in this chapter.
    * Table and Panel [Full source](../../tree/10-table-and-panel) | [Diffs from previous step](../../compare/10-navigation...10-table-and-panel)
    * Forms - Grid Based Forms [Full source](../../tree/10-forms--grid-based-forms) | [Diffs from previous step](../../compare/10-table-and-panel...10-forms--grid-based-forms)
    * Forms - Inline Forms [Full source](../../tree/10-forms--inline-forms) | [Diffs from previous step](../../compare/10-forms--grid-based-forms...10-forms--inline-forms)
+   * Forms - Horizontal Forms [Full source](../../tree/10-horizontal-forms) | [Diffs from previous step](../../compare/10-forms--inline-forms...10-horizontal-forms)
