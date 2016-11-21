@@ -1,7 +1,7 @@
 import React from 'react';
 import { Alert, Collapse } from 'react-bootstrap';
 
-export default class UndoToast extends React.Component {
+export default class Toast extends React.Component {
   componentDidUpdate() {
     if (this.props.showing) {
       clearTimeout(this.dismissTimer);
@@ -29,13 +29,13 @@ export default class UndoToast extends React.Component {
   }
 }
 
-UndoToast.propTypes = {
+Toast.propTypes = {
   showing: React.PropTypes.bool.isRequired,
   onDismiss: React.PropTypes.func.isRequired,
   bsStyle: React.PropTypes.string,
   message: React.PropTypes.any.isRequired,
 };
 
-UndoToast.defaultProps = {
+Toast.defaultProps = {
   bsStyle: 'success',
 };
