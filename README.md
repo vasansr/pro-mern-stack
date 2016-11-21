@@ -69,4 +69,4 @@ There are no code listings in this chapter.
    * Get API: [Full source](../../tree/09-get-api) | [Diffs from previous step](../../compare/09-filter-form...09-get-api)
    * Edit Page: [Full source](../../tree/09-edit-page) | [Diffs from previous step](../../compare/09-get-api...09-edit-page)
    * UI Components - Number Input: [Full source](../../tree/09-ui-components--number-input) | [Diffs from previous step](../../compare/09-edit-page...09-ui-components--number-input)
-   * UI Components - Date Input [Full source](../../tree/09-ui-components--date-input) | [Diffs from previous step](../../compare/09-ui-components--number-input...09-ui-components--date-input)
+   * UI Components - Date Input: [Full source](../../tree/09-ui-components--date-input) | [Diffs from previous step](../../compare/09-ui-components--number-input...09-ui-components--date-input)
