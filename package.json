@@ -7,7 +7,7 @@
     "start": "nodemon -w dist dist/server.js",
     "compile-server": "babel server --presets es2015-node4 --out-dir dist --source-maps",
     "watch-server": "babel server --presets es2015-node4 --out-dir dist --source-maps --watch",
-    "start-hook": "nodemon -w server server/start_hook.js",
+    "start-hook": "nodemon -e js,jsx -w server server/start_hook.js",
     "compile": "webpack",
     "watch": "webpack-dev-server --hot --inline",
     "lint": "eslint --ext js,jsx src server webpack.config.js",
