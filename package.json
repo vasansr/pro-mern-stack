@@ -4,9 +4,9 @@
   "description": "Pro MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w dist dist/server.js",
-    "compile-server": "babel server --presets es2015-node4 --out-dir dist --source-maps",
-    "watch-server": "babel server --presets es2015-node4 --out-dir dist --source-maps --watch",
+    "start": "nodemon -w dist dist/server.bundle.js",
+    "compile-server": "webpack --config webpack.server-config.js",
+    "watch-server": "webpack --config webpack.server-config.js --watch",
     "start-hook": "nodemon -e js,jsx -w server server/start_hook.js",
     "compile": "webpack",
     "watch": "webpack-dev-server --hot --inline",
@@ -35,6 +35,12 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.6",
+    "object-assign": "^4.1.0",
+    "react": "^15.3.1",
+    "react-bootstrap": "^0.30.6",
+    "react-dom": "^15.3.1",
+    "react-router": "^2.7.0",
+    "react-router-bootstrap": "^0.23.1",
     "source-map-support": "^0.4.2"
   },
   "devDependencies": {
@@ -52,11 +58,6 @@
     "eslint-plugin-jsx-a11y": "^1.5.5",
     "eslint-plugin-react": "^5.2.2",
     "nodemon": "^1.10.0",
-    "react": "^15.3.1",
-    "react-bootstrap": "^0.30.6",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.7.0",
-    "react-router-bootstrap": "^0.23.1",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.15.0",
     "whatwg-fetch": "^1.0.0"
