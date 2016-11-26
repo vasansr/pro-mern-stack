@@ -89,3 +89,4 @@ There are no code listings in this chapter.
 ### Chapter 11: Isomorphism and Redux
    * Basic Server Rendering: [Full source](../../tree/11-basic-server-rendering) | [Diffs from previous step](../../compare/10-modals...11-basic-server-rendering)
    * Initial State: [Full source](../../tree/11-initial-state) | [Diffs from previous step](../../compare/11-basic-server-rendering...11-initial-state)
+   * Server Side Bundle: [Full source](../../tree/11-server-side-bundle) | [Diffs from previous step](../../compare/11-initial-state...11-server-side-bundle)
