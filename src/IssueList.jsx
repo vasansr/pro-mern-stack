@@ -1,5 +1,5 @@
 import React from 'react';
-import 'whatwg-fetch';
+import 'isomorphic-fetch';
 import { Link } from 'react-router';
 import { Button, Glyphicon, Table, Panel } from 'react-bootstrap';
 
@@ -61,10 +61,17 @@ IssueTable.propTypes = {
 };
 
 export default class IssueList extends React.Component {
-  constructor() {
-    super();
+  constructor(props, context) {
+    super(props, context);
+    const issues = context.initialState.data.records;
+    issues.forEach(issue => {
+      issue.created = new Date(issue.created);
+      if (issue.completionDate) {
+        issue.completionDate = new Date(issue.completionDate);
+      }
+    });
     this.state = {
-      issues: [],
+      issues,
       toastVisible: false, toastMessage: '', toastType: 'success',
     };
 
@@ -149,4 +156,8 @@ export default class IssueList extends React.Component {
 IssueList.propTypes = {
   location: React.PropTypes.object.isRequired,
   router: React.PropTypes.object,
+};
+
+IssueList.contextTypes = {
+  initialState: React.PropTypes.object,
 };
