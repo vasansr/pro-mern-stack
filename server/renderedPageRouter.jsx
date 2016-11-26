@@ -19,7 +19,6 @@ renderedPageRouter.get('*', (req, res) => {
     } else if (renderProps) {
       fetch(`http://localhost:3000/api${req.url}`).then(response => (response.json()))
       .then(data => {
-        console.log('Data', data);
         const initialState = { data };
         const html = renderToString(
           <ContextWrapper initialState={initialState} >
