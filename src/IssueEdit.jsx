@@ -10,10 +10,18 @@ import Toast from './Toast.jsx';
 export default class IssueEdit extends React.Component {
   constructor(props, context) {
     super(props, context);
-    const issue = context.initialState.data;
-    issue.created = new Date(issue.created);
-    issue.completionDate = issue.completionDate != null ?
-      new Date(issue.completionDate) : null;
+    let issue;
+    if (context.initialState.IssueEdit) {
+      issue = context.initialState.IssueEdit;
+      issue.created = new Date(issue.created);
+      issue.completionDate = issue.completionDate != null ?
+        new Date(issue.completionDate) : null;
+    } else {
+      issue = {
+        _id: '', title: '', status: '', owner: '', effort: null,
+        completionDate: null, created: null,
+      };
+    }
     this.state = {
       issue,
       invalidFields: {}, showingValidation: false,
@@ -88,21 +96,23 @@ export default class IssueEdit extends React.Component {
     });
   }
 
+  static dataFetcher({ params, urlBase }) {
+    return fetch(`${urlBase || ''}/api/issues/${params.id}`).then(response => {
+      if (!response.ok) return response.json().then(error => Promise.reject(error));
+      return response.json().then(data => ({ IssueEdit: data }));
+    });
+  }
+
   loadData() {
-    fetch(`/api/issues/${this.props.params.id}`).then(response => {
-      if (response.ok) {
-        response.json().then(issue => {
-          issue.created = new Date(issue.created);
-          issue.completionDate = issue.completionDate != null ?
-            new Date(issue.completionDate) : null;
-          this.setState({ issue });
-        });
-      } else {
-        response.json().then(error => {
-          this.showError(`Failed to fetch issue: ${error.message}`);
-        });
-      }
-    }).catch(err => {
+    IssueEdit.dataFetcher({ params: this.props.params })
+    .then(data => {
+      const issue = data.IssueEdit;
+      issue.created = new Date(issue.created);
+      issue.completionDate = issue.completionDate != null ?
+        new Date(issue.completionDate) : null;
+      this.setState({ issue });
+    })
+    .catch(err => {
       this.showError(`Error in fetching data from server: ${err.message}`);
     });
   }
