@@ -86,5 +86,5 @@ There are no code listings in this chapter.
    * Alerts - Results: [Full source](../../tree/10-alerts--results) | [Diffs from previous step](../../compare/10-alerts--validations...10-alerts--results)
    * Modals: [Full source](../../tree/10-modals) | [Diffs from previous step](../../compare/10-alerts--results...10-modals)
 
-### Chapter 11: Isomorphism and Redux
+### Chapter 11: Server Rendering
    * Basic Server Rendering: [Full source](../../tree/11-basic-server-rendering) | [Diffs from previous step](../../compare/10-modals...11-basic-server-rendering)
