@@ -24,5 +24,5 @@ HelloWorld.propTypes = {
 };
 
 HelloWorld.defaultProps = {
-  addressee: 'World',
+  addressee: '',
 };
