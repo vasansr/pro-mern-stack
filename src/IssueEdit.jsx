@@ -8,6 +8,13 @@ import DateInput from './DateInput.jsx';
 import Toast from './Toast.jsx';
 
 export default class IssueEdit extends React.Component {
+  static dataFetcher({ params, urlBase }) {
+    return fetch(`${urlBase || ''}/api/issues/${params.id}`).then(response => {
+      if (!response.ok) return response.json().then(error => Promise.reject(error));
+      return response.json().then(data => ({ IssueEdit: data }));
+    });
+  }
+
   constructor(props, context) {
     super(props, context);
     let issue;
@@ -96,13 +103,6 @@ export default class IssueEdit extends React.Component {
     });
   }
 
-  static dataFetcher({ params, urlBase }) {
-    return fetch(`${urlBase || ''}/api/issues/${params.id}`).then(response => {
-      if (!response.ok) return response.json().then(error => Promise.reject(error));
-      return response.json().then(data => ({ IssueEdit: data }));
-    });
-  }
-
   loadData() {
     IssueEdit.dataFetcher({ params: this.props.params })
     .then(data => {
@@ -111,8 +111,7 @@ export default class IssueEdit extends React.Component {
       issue.completionDate = issue.completionDate != null ?
         new Date(issue.completionDate) : null;
       this.setState({ issue });
-    })
-    .catch(err => {
+    }).catch(err => {
       this.showError(`Error in fetching data from server: ${err.message}`);
     });
   }

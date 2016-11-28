@@ -61,6 +61,13 @@ IssueTable.propTypes = {
 };
 
 export default class IssueList extends React.Component {
+  static dataFetcher({ urlBase, location }) {
+    return fetch(`${urlBase || ''}/api/issues${location.search}`).then(response => {
+      if (!response.ok) return response.json().then(error => Promise.reject(error));
+      return response.json().then(data => ({ IssueList: data }));
+    });
+  }
+
   constructor(props, context) {
     super(props, context);
     const issues = context.initialState.IssueList ? context.initialState.IssueList.records : [];
@@ -106,13 +113,6 @@ export default class IssueList extends React.Component {
 
   dismissToast() {
     this.setState({ toastVisible: false });
-  }
-
-  static dataFetcher({ urlBase, location }) {
-    return fetch(`${urlBase || ''}/api/issues${location.search}`).then(response => {
-      if (!response.ok) return response.json().then(error => Promise.reject(error));
-      return response.json().then(data => ({ IssueList: data }));
-    });
   }
 
   loadData() {
