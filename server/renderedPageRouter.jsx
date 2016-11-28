@@ -8,7 +8,8 @@ import template from './template.js';
 const renderedPageRouter = new Router();
 
 renderedPageRouter.get('*', (req, res) => {
-  const html = renderToString(<HelloWorld />);
+  const initialState = { addressee: 'Universe' };
+  const html = renderToString(<HelloWorld {...initialState} />);
   res.send(template(html));
 });
 
