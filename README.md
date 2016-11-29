@@ -93,3 +93,6 @@ There are no code listings in this chapter.
    * Server Side Bundle: [Full source](../../tree/11-server-side-bundle) | [Diffs from previous step](../../compare/11-initial-state...11-server-side-bundle)
    * Routed Server Rendering: [Full source](../../tree/11-routed-server-rendering) | [Diffs from previous step](../../compare/11-server-side-bundle...11-routed-server-rendering)
    * Encapsulated Fetch: [Full source](../../tree/11-encapsulated-fetch) | [Diffs from previous step](../../compare/11-routed-server-rendering...11-encapsulated-fetch)
+
+### Chapter 12: Advanced Features
+   * MongoDB Aggregate: [Full source](../../tree/12-mongodb-aggregate) | [Diffs from previous step](../../compare/11-encapsulated-fetch...12-mongodb-aggregate)
