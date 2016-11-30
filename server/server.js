@@ -22,7 +22,7 @@ app.get('/api/issues', (req, res) => {
   if (req.query.effort_gte) filter.effort.$gte = parseInt(req.query.effort_gte, 10);
 
   if (req.query._summary === undefined) {
-    let limit = req.query.limit ? parseInt(req.query._limit, 10) : 20;
+    let limit = req.query._limit ? parseInt(req.query._limit, 10) : 20;
     if (limit > 50) limit = 50;
     db.collection('issues').find(filter).limit(limit)
     .toArray()
