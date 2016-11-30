@@ -22,13 +22,21 @@ app.get('/api/issues', (req, res) => {
   if (req.query.effort_gte) filter.effort.$gte = parseInt(req.query.effort_gte, 10);
 
   if (req.query._summary === undefined) {
+    const offset = req.query._offset ? parseInt(req.query._offset, 10) : 0;
     let limit = req.query._limit ? parseInt(req.query._limit, 10) : 20;
     if (limit > 50) limit = 50;
-    db.collection('issues').find(filter).limit(limit)
-    .toArray()
+
+    const cursor = db.collection('issues').find(filter).sort({ _id: 1 })
+    .skip(offset)
+    .limit(limit);
+
+    let totalCount;
+    cursor.count(false).then(result => {
+      totalCount = result;
+      return cursor.toArray();
+    })
     .then(issues => {
-      const metadata = { total_count: issues.length };
-      res.json({ _metadata: metadata, records: issues });
+      res.json({ metadata: { totalCount }, records: issues });
     })
     .catch(error => {
       console.log(error);

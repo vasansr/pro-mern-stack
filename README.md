@@ -96,3 +96,4 @@ There are no code listings in this chapter.
 
 ### Chapter 12: Advanced Features
    * MongoDB Aggregate: [Full source](../../tree/12-mongodb-aggregate) | [Diffs from previous step](../../compare/11-encapsulated-fetch...12-mongodb-aggregate)
+   * Pagination: [Full source](../../tree/12-pagination) | [Diffs from previous step](../../compare/12-mongodb-aggregate...12-pagination)
