@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 
 let db;
 
-/* eslint-disable no-underscore-dangle */
 app.get('/api/issues', (req, res) => {
   const filter = {};
   if (req.query.status) filter.status = req.query.status;
