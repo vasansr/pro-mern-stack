@@ -19,6 +19,6 @@ for (i=0; i<1000; i++) {
     created: randomCreatedDate, completionDate: randomCompletionDate,
     owner: randomOwner, status: randomStatus, effort: randomEffort,
   };
-  issue.title = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit - ' + i;
+  issue.title = 'Lorem ipsum dolor sit amet, ' + i;
   db.issues.insert(issue);
 }
