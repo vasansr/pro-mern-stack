@@ -8,7 +8,6 @@ class IssueAddNavItem extends React.Component {
     super(props);
     this.state = {
       showing: false,
-      toastVisible: false, toastMessage: '', toastType: 'success',
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
