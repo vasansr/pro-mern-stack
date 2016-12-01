@@ -3,8 +3,6 @@ import { withRouter } from 'react-router';
 import { NavItem, Glyphicon, Modal, Form, FormGroup, FormControl, ControlLabel,
   Button, ButtonToolbar } from 'react-bootstrap';
 
-import Toast from './Toast.jsx';
-
 class IssueAddNavItem extends React.Component {
   constructor(props) {
     super(props);
@@ -15,8 +13,6 @@ class IssueAddNavItem extends React.Component {
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.submit = this.submit.bind(this);
-    this.showError = this.showError.bind(this);
-    this.dismissToast = this.dismissToast.bind(this);
   }
 
   showModal() {
@@ -25,14 +21,6 @@ class IssueAddNavItem extends React.Component {
 
   hideModal() {
     this.setState({ showing: false });
-  }
-
-  showError(message) {
-    this.setState({ toastVisible: true, toastMessage: message, toastType: 'danger' });
-  }
-
-  dismissToast() {
-    this.setState({ toastVisible: false });
   }
 
   submit(e) {
@@ -54,11 +42,11 @@ class IssueAddNavItem extends React.Component {
         });
       } else {
         response.json().then(error => {
-          this.showError(`Failed to add issue: ${error.message}`);
+          this.props.showError(`Failed to add issue: ${error.message}`);
         });
       }
     }).catch(err => {
-      this.showError(`Error in sending data to server: ${err.message}`);
+      this.props.showError(`Error in sending data to server: ${err.message}`);
     });
   }
 
@@ -88,10 +76,6 @@ class IssueAddNavItem extends React.Component {
             </ButtonToolbar>
           </Modal.Footer>
         </Modal>
-        <Toast
-          showing={this.state.toastVisible} message={this.state.toastMessage}
-          onDismiss={this.dismissToast} bsStyle={this.state.toastType}
-        />
       </NavItem>
     );
   }
@@ -99,6 +83,7 @@ class IssueAddNavItem extends React.Component {
 
 IssueAddNavItem.propTypes = {
   router: React.PropTypes.object,
+  showError: React.PropTypes.func.isRequired,
 };
 
 export default withRouter(IssueAddNavItem);
