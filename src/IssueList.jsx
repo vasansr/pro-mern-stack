@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import { Button, Glyphicon, Table, Panel, Pagination } from 'react-bootstrap';
 
 import IssueFilter from './IssueFilter.jsx';
-import Toast from './Toast.jsx';
+import withToast from './withToast.jsx';
 
 const IssueRow = (props) => {
   function onDeleteClick() {
@@ -62,7 +62,7 @@ IssueTable.propTypes = {
 
 const PAGE_SIZE = 10;
 
-export default class IssueList extends React.Component {
+class IssueList extends React.Component {
   static dataFetcher({ urlBase, location }) {
     const query = Object.assign({}, location.query);
     const pageStr = query._page;
@@ -91,15 +91,12 @@ export default class IssueList extends React.Component {
     });
     this.state = {
       issues,
-      toastVisible: false, toastMessage: '', toastType: 'success',
       totalCount: data.metadata.totalCount,
     };
 
     this.setFilter = this.setFilter.bind(this);
     this.selectPage = this.selectPage.bind(this);
     this.deleteIssue = this.deleteIssue.bind(this);
-    this.showError = this.showError.bind(this);
-    this.dismissToast = this.dismissToast.bind(this);
   }
 
   componentDidMount() {
@@ -127,14 +124,6 @@ export default class IssueList extends React.Component {
     this.props.router.push({ pathname: this.props.location.pathname, query });
   }
 
-  showError(message) {
-    this.setState({ toastVisible: true, toastMessage: message, toastType: 'danger' });
-  }
-
-  dismissToast() {
-    this.setState({ toastVisible: false });
-  }
-
   loadData() {
     IssueList.dataFetcher({ location: this.props.location })
     .then(data => {
@@ -147,13 +136,13 @@ export default class IssueList extends React.Component {
       });
       this.setState({ issues, totalCount: data.IssueList.metadata.totalCount });
     }).catch(err => {
-      this.showError(`Error in fetching data from server: ${err}`);
+      this.props.showError(`Error in fetching data from server: ${err}`);
     });
   }
 
   deleteIssue(id) {
     fetch(`/api/issues/${id}`, { method: 'DELETE' }).then(response => {
-      if (!response.ok) this.showError('Failed to delete issue');
+      if (!response.ok) this.props.showError('Failed to delete issue');
       else this.loadData();
     });
   }
@@ -170,10 +159,6 @@ export default class IssueList extends React.Component {
           onSelect={this.selectPage} maxButtons={7} next prev boundaryLinks
         />
         <IssueTable issues={this.state.issues} deleteIssue={this.deleteIssue} />
-        <Toast
-          showing={this.state.toastVisible} message={this.state.toastMessage}
-          onDismiss={this.dismissToast} bsStyle={this.state.toastType}
-        />
       </div>
     );
   }
@@ -182,8 +167,11 @@ export default class IssueList extends React.Component {
 IssueList.propTypes = {
   location: React.PropTypes.object.isRequired,
   router: React.PropTypes.object,
+  showError: React.PropTypes.func.isRequired,
 };
 
 IssueList.contextTypes = {
   initialState: React.PropTypes.object,
 };
+
+export default withToast(IssueList);
