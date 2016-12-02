@@ -3,6 +3,7 @@ SourceMapSupport.install();
 import 'babel-polyfill';
 
 import express from 'express';
+import session from 'express-session';
 import bodyParser from 'body-parser';
 import { MongoClient, ObjectId } from 'mongodb';
 import Issue from './issue.js';
@@ -13,6 +14,8 @@ app.use(express.static('static'));
 app.use(bodyParser.json());
 
 let db;
+
+app.use(session({ secret: 'h7e3f5s6', resave: false, saveUninitialized: true }));
 
 app.get('/api/issues', (req, res) => {
   const filter = {};
@@ -158,6 +161,33 @@ app.delete('/api/issues/:id', (req, res) => {
     console.log(error);
     res.status(500).json({ message: `Internal Server Error: ${error}` });
   });
+});
+
+app.post('/login', (req, res) => {
+  if (!req.body.id_token) {
+    res.status(400).send({ code: 400, message: 'Missing Token.' });
+    return;
+  }
+  console.log('Login token', req.body.id_token);
+  fetch(`https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${req.body.id_token}`)
+  .then(response => {
+    if (!response.ok) response.json().then(error => Promise.reject(error));
+    response.json().then(data => {
+      req.session.login = {
+        name: data.given_name, email: data.email,
+      };
+      res.json(req.session.login);
+    });
+  })
+  .catch(error => {
+    console.log(error);
+    res.status(500).json({ message: `Internal Server Error: ${error}` });
+  });
+});
+
+app.post('/logout', (req, res) => {
+  if (req.session) req.session.destroy();
+  res.json({ status: 'ok' });
 });
 
 app.use('/', renderedPageRouter);
