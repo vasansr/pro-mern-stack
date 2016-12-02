@@ -98,3 +98,4 @@ There are no code listings in this chapter.
    * MongoDB Aggregate: [Full source](../../tree/12-mongodb-aggregate) | [Diffs from previous step](../../compare/11-encapsulated-fetch...12-mongodb-aggregate)
    * Pagination: [Full source](../../tree/12-pagination) | [Diffs from previous step](../../compare/12-mongodb-aggregate...12-pagination)
    * Higher Order Components: [Full source](../../tree/12-higher-order-components) | [Diffs from previous step](../../compare/12-pagination...12-higher-order-components)
+   * Search Bar: [Full source](../../tree/12-search-bar) | [Diffs from previous step](../../compare/12-higher-order-components...12-search-bar)
