@@ -227,4 +227,7 @@ IssueEdit.contextTypes = {
   initialState: React.PropTypes.object,
 };
 
-export default withToast(IssueEdit);
+const IssueEditWithToast = withToast(IssueEdit);
+IssueEditWithToast.dataFetcher = IssueEdit.dataFetcher;
+
+export default IssueEditWithToast;
