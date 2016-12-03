@@ -1,70 +1,66 @@
 import React from 'react';
-import { NavItem, Modal, NavDropdown, MenuItem, Button } from 'react-bootstrap';
+import { NavItem, Modal, Button, NavDropdown, MenuItem } from 'react-bootstrap';
+
+import config from '../config.js';
 
 class LoginNavItem extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      showing: false,
+      showing: false, disabled: true,
     };
     this.showModal = this.showModal.bind(this);
     this.hideModal = this.hideModal.bind(this);
     this.logout = this.logout.bind(this);
-    this.onSuccess = this.onSuccess.bind(this);
+    this.login = this.login.bind(this);
   }
 
-  onSuccess(googleUser, test) {
-    // this.hideModal();
-    console.log('On Success', googleUser, test);
-    fetch('/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ id_token: googleUser.getAuthResponse().id_token }),
-    }).then(response => {
-      console.log('Post response', response);
-      if (response.ok) {
-        response.json().then(user => {
-          console.log('Post response json', user);
-          this.props.onLogin(user.name);
-        });
-      } else {
-        response.json().then(error => {
-          this.props.showError(`App login failed: ${error}`);
-        });
+  componentDidMount() {
+    window.gapi.load('auth2', () => {
+      if (!window.gapi.auth2.getAuthInstance()) {
+        window.gapi.auth2.init({ client_id: config.googleClientId });
       }
-    })
-    .catch(err => {
-      this.props.showError(`Error posting login to app ${err}`);
+      this.setState({ disabled: false });
     });
   }
 
-  onFailure() {
-    this.props.showError('Login failed');
+  login() {
+    this.hideModal();
+    const auth2 = window.gapi.auth2.getAuthInstance();
+    auth2.signIn().then(googleUser => {
+      fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id_token: googleUser.getAuthResponse().id_token }),
+      }).then(response => {
+        if (response.ok) {
+          response.json().then(user => {
+            this.props.onLogin(user.name);
+          });
+        } else {
+          response.json().then(error => {
+            this.props.showError(`App login failed: ${error}`);
+          });
+        }
+      })
+      .catch(err => {
+        this.props.showError(`Error posting login to app: ${err}`);
+      });
+    }, error => {
+      this.props.showError(`Error authenticating with Google: ${error}`);
+    });
   }
 
   logout() {
-    // console.log('user signing out');
-    const auth2 = gapi.auth2.getAuthInstance();   //eslint-disable-line
-    console.log('Is signed in', auth2.isSignedIn.get());
+    const auth2 = window.gapi.auth2.getAuthInstance();
     auth2.signOut().then(() => {
       this.props.showSuccess('User signed out.');
       this.props.onLogout();
     });
-    this.hideModal();
   }
 
   showModal() {
-    this.setState({ showing: true }, () => {
-      window.gapi.signin2.render('signin', {
-        scope: 'profile email',
-        width: 240,
-        height: 50,
-        longtitle: true,
-        theme: 'dark',
-        onsuccess: this.onSuccess,
-        onfailure: this.onFailure,
-      });
-    });
+    this.setState({ showing: true });
   }
 
   hideModal() {
@@ -74,21 +70,25 @@ class LoginNavItem extends React.Component {
   render() {
     if (this.props.user.loggedIn) {
       return (
-        <NavDropdown id="user-dropdown" title={this.props.user.name}>
+        <NavDropdown title={this.props.user.name} id="user-dropdown">
           <MenuItem onClick={this.logout}>Logout</MenuItem>
         </NavDropdown>
       );
     }
     return (
       <NavItem onClick={this.showModal}>Login
-        <Modal keyboard show={this.state.showing} onHide={this.hideModal}>
+        <Modal keyboard show={this.state.showing} onHide={this.hideModal} bsSize="sm">
           <Modal.Header closeButton>
             <Modal.Title>Login</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <div id="signin" className="g-signin2"></div>
-            <Button onClick={this.logout}>Logout</Button>
+            <Button block disabled={this.state.disabled} onClick={this.login}>
+              <img src="/btn_google_signin_dark_normal_web.png" alt="Sign In" />
+            </Button>
           </Modal.Body>
+          <Modal.Footer>
+            <Button bsStyle="link" onClick={this.hideModal}>Cancel</Button>
+          </Modal.Footer>
         </Modal>
       </NavItem>
     );

@@ -5,9 +5,7 @@ export default function template(body, initialState) {
   <meta charset="UTF-8" />
   <title>Pro MERN Stack</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-signin-client_id"
-    content="364319357978-g3jfccrecmrooetgpheesd3ko8s92rpg.apps.googleusercontent.com">
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://apis.google.com/js/api:client.js"></script>
   <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" >
   <link rel="stylesheet" href="/react-select/react-select.css" >
   <style>

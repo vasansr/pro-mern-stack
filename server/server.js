@@ -168,7 +168,6 @@ app.post('/login', (req, res) => {
     res.status(400).send({ code: 400, message: 'Missing Token.' });
     return;
   }
-  console.log('Login token', req.body.id_token);
   fetch(`https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${req.body.id_token}`)
   .then(response => {
     if (!response.ok) response.json().then(error => Promise.reject(error));
