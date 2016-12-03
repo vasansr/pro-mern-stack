@@ -98,4 +98,7 @@ IssueReport.contextTypes = {
   initialState: React.PropTypes.object,
 };
 
-export default withToast(IssueReport);
+const IssueReportWithToast = withToast(IssueReport);
+IssueReportWithToast.dataFetcher = IssueReport.dataFetcher;
+
+export default IssueReportWithToast;
