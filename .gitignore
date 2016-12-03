@@ -4,3 +4,4 @@ static/vendor.bundle.js
 static/app.bundle.js.map
 static/vendor.bundle.js.map
 dist
+config.js
