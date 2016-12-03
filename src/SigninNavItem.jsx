@@ -28,7 +28,24 @@ export default class SigninNavItem extends React.Component {
     this.hideModal();
     const auth2 = window.gapi.auth2.getAuthInstance();
     auth2.signIn().then(googleUser => {
-      this.props.onSignin(googleUser.getBasicProfile().getGivenName());
+      fetch('/signin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id_token: googleUser.getAuthResponse().id_token }),
+      }).then(response => {
+        if (response.ok) {
+          response.json().then(user => {
+            this.props.onSignin(user.name);
+          });
+        } else {
+          response.json().then(error => {
+            this.props.showError(`App login failed: ${error}`);
+          });
+        }
+      })
+      .catch(err => {
+        this.props.showError(`Error posting login to app: ${err}`);
+      });
     }, error => {
       this.props.showError(`Error authenticating with Google: ${error}`);
     });
@@ -36,9 +53,16 @@ export default class SigninNavItem extends React.Component {
 
   signout() {
     const auth2 = window.gapi.auth2.getAuthInstance();
-    auth2.signOut().then(() => {
-      this.props.showSuccess('Successfully signed out.');
-      this.props.onSignout();
+    fetch('/signout', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+    }).then(response => {
+      if (response.ok) {
+        auth2.signOut().then(() => {
+          this.props.showSuccess('Successfully signed out.');
+          this.props.onSignout();
+        });
+      }
     });
   }
 

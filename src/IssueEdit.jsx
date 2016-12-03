@@ -198,7 +198,9 @@ class IssueEdit extends React.Component {
           <FormGroup>
             <Col smOffset={3} sm={6}>
               <ButtonToolbar>
-                <Button bsStyle="primary" type="submit">Submit</Button>
+                <Button bsStyle="primary" type="submit" disabled={!this.props.user.signedIn}>
+                  Submit
+                </Button>
                 <LinkContainer to="/issues">
                   <Button bsStyle="link">Back</Button>
                 </LinkContainer>
@@ -218,6 +220,7 @@ IssueEdit.propTypes = {
   params: React.PropTypes.object.isRequired,
   showSuccess: React.PropTypes.func.isRequired,
   showError: React.PropTypes.func.isRequired,
+  user: React.PropTypes.object.isRequired,
 };
 
 IssueEdit.contextTypes = {

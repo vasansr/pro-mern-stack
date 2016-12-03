@@ -100,3 +100,4 @@ There are no code listings in this chapter.
    * Higher Order Components: [Full source](../../tree/12-higher-order-components) | [Diffs from previous step](../../compare/12-pagination...12-higher-order-components)
    * Search Bar: [Full source](../../tree/12-search-bar) | [Diffs from previous step](../../compare/12-higher-order-components...12-search-bar)
    * Google Sign-In: [Full source](../../tree/12-google-sign-in) | [Diffs from previous step](../../compare/12-search-bar...12-google-sign-in)
+   * Session Handling: [Full source](../../tree/12-session-handling) | [Diffs from previous step](../../compare/12-google-sign-in...12-session-handling)

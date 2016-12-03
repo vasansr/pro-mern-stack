@@ -20,7 +20,7 @@ renderedPageRouter.get('*', (req, res) => {
       const componentsWithData = renderProps.components.filter(c => c.dataFetcher);
       const dataFetchers = componentsWithData.map(c => c.dataFetcher({
         params: renderProps.params, location: renderProps.location,
-        urlBase: 'http://localhost:3000',
+        urlBase: 'http://localhost:3000', cookie: req.headers.cookie,
       }));
       Promise.all(dataFetchers).then((dataList) => {
         let initialState = {};
