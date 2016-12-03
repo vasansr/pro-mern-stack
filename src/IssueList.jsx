@@ -174,4 +174,7 @@ IssueList.contextTypes = {
   initialState: React.PropTypes.object,
 };
 
-export default withToast(IssueList);
+const IssueListWithToast = withToast(IssueList);
+IssueListWithToast.dataFetcher = IssueList.dataFetcher;
+
+export default IssueListWithToast;
