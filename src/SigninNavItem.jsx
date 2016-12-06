@@ -1,8 +1,6 @@
 import React from 'react';
 import { NavItem, Modal, Button, NavDropdown, MenuItem } from 'react-bootstrap';
 
-import config from '../config.js';
-
 export default class SigninNavItem extends React.Component {
   constructor(props) {
     super(props);
@@ -18,9 +16,14 @@ export default class SigninNavItem extends React.Component {
   componentDidMount() {
     window.gapi.load('auth2', () => {
       if (!window.gapi.auth2.getAuthInstance()) {
-        window.gapi.auth2.init({ client_id: config.googleClientId });
+        if (!window.config || !window.config.googleClientId) {
+          this.props.showError('Missing Google Client ID or config file /static.config.js');
+        } else {
+          window.gapi.auth2.init({ client_id: window.config.googleClientId }).then(() => {
+            this.setState({ disabled: false });
+          });
+        }
       }
-      this.setState({ disabled: false });
     });
   }
 
@@ -67,7 +70,11 @@ export default class SigninNavItem extends React.Component {
   }
 
   showModal() {
-    this.setState({ showing: true });
+    if (this.state.disabled) {
+      this.props.showError('Missing Google Client ID or config file /static.config.js');
+    } else {
+      this.setState({ showing: true });
+    }
   }
 
   hideModal() {
