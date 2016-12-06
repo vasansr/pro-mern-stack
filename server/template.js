@@ -18,6 +18,7 @@ export default function template(body, initialState) {
   <script>window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};</script>
   <script src="/vendor.bundle.js"></script>
   <script src="/app.bundle.js"></script>
+  <script src="/config.js"></script>
 </body>
 
 </html>
