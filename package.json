@@ -10,6 +10,8 @@
     "start-hook": "nodemon -w server server/start_hook.js",
     "compile": "webpack",
     "watch": "webpack-dev-server --hot --inline",
+    "dev-all": "npm run watch & npm run watch-server & npm start",
+    "dev-all-hook": "npm run watch & npm run start-hook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
