@@ -49,8 +49,7 @@ export default class App extends React.Component {
           {childrenWithUser}
           <hr />
           <h5><small>
-            Full source code available at this
-            <a href="https://github.com/vasansr/pro-mern-stack">
+            Full source code available at this <a href="https://github.com/vasansr/pro-mern-stack">
             GitHub repository</a>.
           </small></h5>
         </div>
