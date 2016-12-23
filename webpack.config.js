@@ -3,7 +3,10 @@ const webpack = require('webpack');
 module.exports = {
   entry: {
     app: './src/App.jsx',
-    vendor: ['react', 'react-dom', 'whatwg-fetch', 'react-router', 'react-bootstrap'],
+    vendor: [
+      'react', 'react-dom', 'react-router', 'react-bootstrap',
+      'whatwg-fetch', 'babel-polyfill',
+    ],
   },
   output: {
     path: './static',
