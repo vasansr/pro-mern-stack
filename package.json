@@ -7,7 +7,7 @@
     "start": "nodemon -w dist dist/server.bundle.js",
     "compile-server": "webpack --config webpack.server-config.js",
     "watch-server": "webpack --config webpack.server-config.js --watch",
-    "start-hook": "nodemon -e js,jsx -w server server/start_hook.js",
+    "start-hook": "nodemon -e js,jsx -w server,src server/start_hook.js",
     "compile": "webpack",
     "watch": "webpack-dev-server --hot --inline",
     "dev-all": "npm run watch & npm run watch-server & npm start",
