@@ -4,7 +4,7 @@
   "description": "Pro MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w dist dist/server.bundle.js",
+    "start": "node dist/server.bundle.js",
     "compile-server": "webpack --config webpack.server-config.js",
     "watch-server": "webpack --config webpack.server-config.js --watch",
     "start-hook": "nodemon -e js,jsx -w server server/start_hook.js",
