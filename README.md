@@ -91,4 +91,5 @@ There are no code listings in this chapter.
    * Handling State: [Full source](../../tree/11-handling-state) | [Diffs from previous step](../../compare/11-basic-server-rendering...11-handling-state)
    * Initial State: [Full source](../../tree/11-initial-state) | [Diffs from previous step](../../compare/11-handling-state...11-initial-state)
    * Server Side Bundle: [Full source](../../tree/11-server-side-bundle) | [Diffs from previous step](../../compare/11-initial-state...11-server-side-bundle)
-   * Routed Server Rendering: [Full source](../../tree/11-routed-server-rendering) | [Diffs from previous step](../../compare/11-server-side-bundle...11-routed-server-rendering)
+   * Backend HMR: [Full source](../../tree/11-backend-hmr) | [Diffs from previous step](../../compare/11-server-side-bundle...11-backend-hmr)
+   * Routed Server Rendering: [Full source](../../tree/11-routed-server-rendering) | [Diffs from previous step](../../compare/11-backend-hmr...11-routed-server-rendering)
