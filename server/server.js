@@ -1,10 +1,6 @@
-import SourceMapSupport from 'source-map-support';
-SourceMapSupport.install();
-import 'babel-polyfill';
-
 import express from 'express';
 import bodyParser from 'body-parser';
-import { MongoClient, ObjectId } from 'mongodb';
+import { ObjectId } from 'mongodb';
 import Issue from './issue.js';
 import renderedPageRouter from './renderedPageRouter.jsx';
 
@@ -161,11 +157,8 @@ app.delete('/api/issues/:id', (req, res) => {
 
 app.use('/', renderedPageRouter);
 
-MongoClient.connect('mongodb://localhost/issuetracker').then(connection => {
-  db = connection;
-  app.listen(3000, () => {
-    console.log('App started on port 3000');
-  });
-}).catch(error => {
-  console.log('ERROR:', error);
-});
+function setDb(newDb) {
+  db = newDb;
+}
+
+export { app, setDb };
