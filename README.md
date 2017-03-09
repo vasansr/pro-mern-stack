@@ -17,6 +17,8 @@ There are no code listings in this chapter.
    * Automate: [Full source](../../tree/02-automate) | [Diffs from previous step](../../compare/02-transform...02-automate)
    * ES2015:  [Full source](../../tree/02-es2015) | [Diffs from previous step](../../compare/02-automate...02-es2015)
 
+   * Errata / Issues relating to Chapter 2](../..//milestone/2)
+
 ### Chapter 3: React Components
    * React Classes:  [Full source](../../tree/03-react-classes) | [Diffs from previous step](../../compare/02-es2015...03-react-classes)
    * Composing Components:  [Full source](../../tree/03-composing-components) | [Diffs from previous step](../../compare/03-react-classes...03-composing-components)
