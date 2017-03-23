@@ -1,8 +1,15 @@
-# Pro MERN Stack
+![Pro MERN Stack](https://images.springer.com/sgw/books/medium/9781484226520.jpg)
 
 This is the complete source code compilation of all code listings in the book
-Pro MERN Stack by Vasan Subramanian, published by Apress. The links to each
-step of the book are available in this page.
+Pro MERN Stack by Vasan Subramanian, published by Apress. The book can be purchased at any of these websites:
+
+   * [Apress](http://www.apress.com/in/book/9781484226520)
+   * [Springer](http://www.springer.com/gb/book/9781484226520)
+   * [Amazon](https://www.amazon.com/Pro-MERN-Stack-Development-Express-ebook/dp/B06XDVC4SC)
+
+Each section in the book ends with a working application, which corresponds to a branch in this
+repository. For each section, you can browse the complete source, or look at the differences from
+the previous section/step using the appropriate link against each section, in this page.
 
 ### Chapter 1: Introduction
 
