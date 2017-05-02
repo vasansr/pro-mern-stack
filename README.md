@@ -15,6 +15,8 @@ the previous section/step using the appropriate link against each section, in th
 
 There are no code listings in this chapter.
 
+[Errata in Chapter 1](../../milestone/1)
+
 ### Chapter 2: Hello World
 
    * Server-less Hello World: [Full source](../../tree/02-server-less-hello-world)
@@ -24,7 +26,7 @@ There are no code listings in this chapter.
    * Automate: [Full source](../../tree/02-automate) | [Diffs from previous step](../../compare/02-transform...02-automate)
    * ES2015:  [Full source](../../tree/02-es2015) | [Diffs from previous step](../../compare/02-automate...02-es2015)
 
-[Errata / Issues relating to Chapter 2](../..//milestone/2)
+[Errata / Issues relating to Chapter 2](../../milestone/2)
 
 ### Chapter 3: React Components
    * React Classes:  [Full source](../../tree/03-react-classes) | [Diffs from previous step](../../compare/02-es2015...03-react-classes)
@@ -33,12 +35,16 @@ There are no code listings in this chapter.
    * Passing Data - Using Children: [Full source](../../tree/03-passing-data--using-children) | [Diffs from previous step](../../compare/03-passing-data--using-properties...03-passing-data--using-children)
    * Dynamic Composition: [Full source](../../tree/03-dynamic-composition) | [Diffs from previous step](../../compare/03-passing-data--using-children...03-dynamic-composition)
 
+[Errata / Issues relating to Chapter 3](../../milestone/3)
+
 ### Chapter 4: React State
    * Setting State: [Full source](../../tree/04-setting-state) | [Diffs from previous step](../../compare/03-dynamic-composition...04-setting-state)
    * Async State Initialization: [Full source](../../tree/04-async-state-initialization) | [Diffs from previous step](../../compare/04-setting-state...04-async-state-initialization)
    * Event Handling: [Full source](../../tree/04-event-handling) | [Diffs from previous step](../../compare/04-async-state-initialization...04-event-handling)
    * Communicate Child to Parent: [Full source](../../tree/04-communicate-child-to-parent) | [Diffs from previous step](../../compare/04-event-handling...04-communicate-child-to-parent)
    * Stateless Components: [Full source](../../tree/04-stateless-components) | [Diffs from previous step](../../compare/04-communicate-child-to-parent...04-stateless-components)
+
+[Errata / Issues relating to Chapter 4](../../milestone/4)
 
 ### Chapter 5: Express REST APIs
    * List API: [Full source](../../tree/05-list-api) | [Diffs from previous step](../../compare/04-stateless-components...05-list-api)
@@ -47,11 +53,15 @@ There are no code listings in this chapter.
    * Using Create API: [Full source](../../tree/05-using-create-api) | [Diffs from previous step](../../compare/05-using-list-api...05-using-create-api)
    * Error Handling: [Full source](../../tree/05-error-handling) | [Diffs from previous step](../../compare/05-using-create-api...05-error-handling)
 
+[Errata / Issues relating to Chapter 5](../../milestone/5)
+
 ### Chapter 6: Using MongoDB
    * Schema Initialization: [Full source](../../tree/06-schema-initialization) | [Diffs from previous step](../../compare/05-error-handling...06-schema-initialization)
    * MongoDB Node.js Driver: [Full source](../../tree/06-mongodb-nodejs-driver) | [Diffs from previous step](../../compare/06-schema-initialization...06-mongodb-nodejs-driver)
    * Read From MongoDB: [Full source](../../tree/06-read-from-mongodb) | [Diffs from previous step](../../compare/06-mongodb-nodejs-driver...06-read-from-mongodb)
    * Write to MongoDB: [Full source](../../tree/06-write-to-mongodb) | [Diffs from previous step](../../compare/06-read-from-mongodb...06-write-to-mongodb)
+
+[Errata / Issues relating to Chapter 6](../../milestone/6)
 
 ### Chapter 7: Modularization and Webpack
    * Server-Side Modules: [Full source](../../tree/07-server-side-modules) | [Diffs from previous step](../../compare/06-write-to-mongodb...07-server-side-modules)
@@ -64,6 +74,8 @@ There are no code listings in this chapter.
    * Server-Side ES2015: [Full source](../../tree/07-server-side-es2015) | [Diffs from previous step](../../compare/07-debugging...07-server-side-es2015)
    * ESLint: [Full source](../../tree/07-eslint) | [Diffs from previous step](../../compare/07-server-side-es2015...07-eslint)
 
+[Errata / Issues relating to Chapter 7](../../milestone/7)
+
 ### Chapter 8: React Router
    * Simple Routing: [Full source](../../tree/08-simple-routing) | [Diffs from previous step](../../compare/07-eslint...08-simple-routing)
    * Route Parameters: [Full source](../../tree/08-route-parameters) | [Diffs from previous step](../../compare/08-simple-routing...08-route-parameters)
@@ -71,6 +83,8 @@ There are no code listings in this chapter.
    * Programmatic Navigation: [Full source](../../tree/08-programmatic-navigation) | [Diffs from previous step](../../compare/08-route-query-string...08-programmatic-navigation)
    * Nested Routes: [Full source](../../tree/08-nested-routes) | [Diffs from previous step](../../compare/08-programmatic-navigation...08-nested-routes)
    * Browser History: [Full source](../../tree/08-browser-history) | [Diffs from previous step](../../compare/08-nested-routes...08-browser-history)
+
+[Errata / Issues relating to Chapter 8](../../milestone/8)
 
 ### Chapter 9: Forms
    * More Filters in List API: [Full source](../../tree/09-more-filters-in-list-api) | [Diffs from previous step](../../compare/08-browser-history...09-more-filters-in-list-api)
@@ -84,6 +98,8 @@ There are no code listings in this chapter.
    * Delete API: [Full source](../../tree/09-delete-api) | [Diffs from previous step](../../compare/09-using-update-api...09-delete-api)
    * Using Delete API: [Full source](../../tree/09-using-delete-api) | [Diffs from previous step](../../compare/09-delete-api...09-using-delete-api)
 
+[Errata / Issues relating to Chapter 9](../../milestone/9)
+
 ### Chapter 10: Bootstrap
    * Bootstrap Installation: [Full source](../../tree/10-bootstrap-installation) | [Diffs from previous step](../../compare/09-using-delete-api...10-bootstrap-installation)
    * Navigation: [Full source](../../tree/10-navigation) | [Diffs from previous step](../../compare/10-bootstrap-installation...10-navigation)
@@ -95,6 +111,8 @@ There are no code listings in this chapter.
    * Alerts - Results: [Full source](../../tree/10-alerts--results) | [Diffs from previous step](../../compare/10-alerts--validations...10-alerts--results)
    * Modals: [Full source](../../tree/10-modals) | [Diffs from previous step](../../compare/10-alerts--results...10-modals)
 
+[Errata / Issues relating to Chapter 10](../../milestone/10)
+
 ### Chapter 11: Server Rendering
    * Basic Server Rendering: [Full source](../../tree/11-basic-server-rendering) | [Diffs from previous step](../../compare/10-modals...11-basic-server-rendering)
    * Handling State: [Full source](../../tree/11-handling-state) | [Diffs from previous step](../../compare/11-basic-server-rendering...11-handling-state)
@@ -104,6 +122,8 @@ There are no code listings in this chapter.
    * Routed Server Rendering: [Full source](../../tree/11-routed-server-rendering) | [Diffs from previous step](../../compare/11-backend-hmr...11-routed-server-rendering)
    * Encapsulated Fetch: [Full source](../../tree/11-encapsulated-fetch) | [Diffs from previous step](../../compare/11-routed-server-rendering...11-encapsulated-fetch)
 
+[Errata / Issues relating to Chapter 11](../../milestone/11)
+
 ### Chapter 12: Advanced Features
    * MongoDB Aggregate: [Full source](../../tree/12-mongodb-aggregate) | [Diffs from previous step](../../compare/11-encapsulated-fetch...12-mongodb-aggregate)
    * Pagination: [Full source](../../tree/12-pagination) | [Diffs from previous step](../../compare/12-mongodb-aggregate...12-pagination)
@@ -111,3 +131,11 @@ There are no code listings in this chapter.
    * Search Bar: [Full source](../../tree/12-search-bar) | [Diffs from previous step](../../compare/12-higher-order-components...12-search-bar)
    * Google Sign-In: [Full source](../../tree/12-google-sign-in) | [Diffs from previous step](../../compare/12-search-bar...12-google-sign-in)
    * Session Handling: [Full source](../../tree/12-session-handling) | [Diffs from previous step](../../compare/12-google-sign-in...12-session-handling)
+
+[Errata / Issues relating to Chapter 12](../../milestone/12)
+
+### Chapter 13: Looking Ahead
+
+There are no code listings in this chapter.
+
+[Errata in Chapter 13](../../milestone/13)
