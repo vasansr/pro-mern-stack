@@ -11,11 +11,25 @@ Each section in the book ends with a working application, which corresponds to a
 repository. For each section, you can browse the complete source, or look at the differences from
 the previous section/step using the appropriate link against each section, in this page.
 
+### Demo
+
+There is no online demo, so if you want to take a peek into how the app will look like once it's
+done till the end of the book, you will need to do the following:
+
+   1. Install Node.js (with npm) and MongoDB
+   2. Clone this repository
+   3. Run `npm install` in the project directory
+   4. Run `npm run compile`, followed by `npm run compile-server` to generate the bundles
+   5. Run `npm start` to start the server on port 3000
+   6. (Optionally) Run `mongo scripts/init.mongo.js` to seed the database with some initial data
+
+The above requires that you know, or able to find out how to install Node.js and MongoDB.
+
 ### Chapter 1: Introduction
 
 There are no code listings in this chapter.
 
-[Errata in Chapter 1](../../milestone/1)
+[Errata / Issues relating to Chapter 2](../../milestone/1)
 
 ### Chapter 2: Hello World
 
@@ -138,4 +152,4 @@ There are no code listings in this chapter.
 
 There are no code listings in this chapter.
 
-[Errata in Chapter 13](../../milestone/13)
+[Errata / Issues relating to Chapter 13](../../milestone/13)
