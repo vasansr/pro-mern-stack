@@ -4,7 +4,7 @@
   "description": "Pro MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w dist dist/server.js",
+    "start": "npm run compile-server & nodemon -w dist dist/server.js",
     "compile-server": "babel server --presets es2015-node4 --out-dir dist --source-maps",
     "watch-server": "babel server --presets es2015-node4 --out-dir dist --source-maps --watch",
     "start-hook": "nodemon -w server server/start_hook.js",
@@ -36,7 +36,12 @@
     "babel-polyfill": "^6.13.0",
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
+    "express-session": "^1.14.2",
+    "isomorphic-fetch": "^2.2.1",
     "mongodb": "^2.2.6",
+    "react-native-svg": "^8.0.8",
+    "react-native-svg-charts": "^5.2.0",
+    "recharts": "^1.4.1",
     "source-map-support": "^0.4.2"
   },
   "devDependencies": {
@@ -47,17 +52,14 @@
     "babel-preset-es2015-node4": "^2.1.0",
     "babel-preset-react": "^6.11.1",
     "babel-register": "^6.14.0",
+    "bootstrap": "^3.3.7",
     "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.14.0",
     "eslint-plugin-jsx-a11y": "^1.5.5",
     "eslint-plugin-react": "^5.2.2",
     "nodemon": "^1.10.0",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-router": "^2.7.0",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.0",
-    "whatwg-fetch": "^1.0.0"
+    "webpack-dev-server": "^1.15.0"
   }
 }

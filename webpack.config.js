@@ -2,8 +2,11 @@ const webpack = require('webpack');
 
 module.exports = {
   entry: {
-    app: './src/App.jsx',
-    vendor: ['react', 'react-dom', 'whatwg-fetch', 'babel-polyfill', 'react-router'],
+    app: './client/Client.jsx',
+    vendor: [
+      'react', 'react-dom', 'react-router', 'react-bootstrap', 'react-router-bootstrap',
+      'isomorphic-fetch', 'babel-polyfill', 'react-select',
+    ],
   },
   output: {
     path: './static',
@@ -27,10 +30,11 @@ module.exports = {
     port: 8000,
     contentBase: 'static',
     proxy: {
-      '/api/*': {
+      '**': {
         target: 'http://localhost:3000',
       },
     },
+    historyApiFallback: true,
   },
   devtool: 'source-map',
 };
