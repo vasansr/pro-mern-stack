@@ -1,7 +1,8 @@
 import 'babel-polyfill';
 import React from 'react';
-
-import Header from './Header.jsx';
+import IssueList from './IssueList.jsx';
+import IssueEdit from './IssueEdit.jsx';
+import Graph from './Graph.jsx';
 
 export default class App extends React.Component {
   static dataFetcher({ urlBase, cookie }) {
@@ -12,15 +13,14 @@ export default class App extends React.Component {
     });
   }
 
-  constructor(props, context) {
-    super(props, context);
-    const user = context.initialState.App ? context.initialState.App : {};
-    this.state = {
-      user,
-    };
-    this.onSignin = this.onSignin.bind(this);
-    this.onSignout = this.onSignout.bind(this);
-  }
+const RoutedApp = () => (
+  <Router history={hashHistory} >
+    <Route path="/" component={IssueList} />
+    <Route path="/issueEdit" component={IssueEdit} />
+    <Route path="/Graph" component={Graph} />
+    <Route path="*" component={NoMatch} />
+  </Router>
+);
 
   componentDidMount() {
     App.dataFetcher({ })

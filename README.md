@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+# Pro MERN Stack
+## Add comment here
+=======
 ![Pro MERN Stack](https://images.springer.com/sgw/books/medium/9781484226520.jpg)
 
+>>>>>>> master
 This is the complete source code compilation of all code listings in the book
 Pro MERN Stack by Vasan Subramanian, published by Apress. The book can be purchased at any of these websites:
 
