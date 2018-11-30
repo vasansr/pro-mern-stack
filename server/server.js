@@ -51,6 +51,35 @@ app.post('/api/issues', (req, res) => {
   });
 });
 
+/*
+const graph = [
+  {name: 'Page A', uv: 4000},
+  {name: 'Page B', uv: 3000},
+  {name: 'Page C', uv: 2000},
+  {name: 'Page D', uv: 2780},
+  {name: 'Page E', uv: 1890},
+  {name: 'Page F', uv: 2390},
+  {name: 'Page G', uv: 3490},
+]
+
+ app.get('/api/graph', (req, res) => {
+  const metadata = { total_count: graph.length };
+  res.json({ _metadata: metadata, records: graph });
+});
+*/
+
+app.get('/api/graph', (req, res) => {
+  db.collection('graph').find().toArray()
+  .then(graph => {
+    const metadata = { total_count: graph.length };
+    res.json({ _metadata: metadata, records: graph });
+  })
+  .catch(error => {
+    console.log(error);
+    res.status(500).json({ message: `Internal Server Error: ${error}` });
+  });
+});
+
 MongoClient.connect('mongodb://localhost/issuetracker').then(connection => {
   db = connection;
   app.listen(3000, () => {

@@ -4,7 +4,7 @@
   "description": "Pro MERN Stack",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w dist dist/server.js",
+    "start": "npm run compile-server & nodemon -w dist dist/server.js",
     "compile-server": "babel server --presets es2015-node4 --out-dir dist --source-maps",
     "watch-server": "babel server --presets es2015-node4 --out-dir dist --source-maps --watch",
     "start-hook": "nodemon -w server server/start_hook.js",
@@ -37,6 +37,9 @@
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "mongodb": "^2.2.6",
+    "react-native-svg": "^8.0.8",
+    "react-native-svg-charts": "^5.2.0",
+    "recharts": "^1.4.1",
     "source-map-support": "^0.4.2"
   },
   "devDependencies": {

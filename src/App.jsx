@@ -5,6 +5,7 @@ import { Router, Route, hashHistory } from 'react-router';
 
 import IssueList from './IssueList.jsx';
 import IssueEdit from './IssueEdit.jsx';
+import Graph from './Graph.jsx';
 
 const contentNode = document.getElementById('contents');
 const NoMatch = () => <p>Page Not Found</p>;
@@ -13,6 +14,7 @@ const RoutedApp = () => (
   <Router history={hashHistory} >
     <Route path="/" component={IssueList} />
     <Route path="/issueEdit" component={IssueEdit} />
+    <Route path="/Graph" component={Graph} />
     <Route path="*" component={NoMatch} />
   </Router>
 );
