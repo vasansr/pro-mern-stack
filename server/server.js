@@ -102,7 +102,6 @@ app.post('/api/issues', (req, res) => {
   });
 });
 
-<<<<<<< HEAD
 /*
 const graph = [
   {name: 'Page A', uv: 4000},
@@ -125,21 +124,6 @@ app.get('/api/graph', (req, res) => {
   .then(graph => {
     const metadata = { total_count: graph.length };
     res.json({ _metadata: metadata, records: graph });
-=======
-app.get('/api/issues/:id', (req, res) => {
-  let issueId;
-  try {
-    issueId = new ObjectId(req.params.id);
-  } catch (error) {
-    res.status(422).json({ message: `Invalid issue ID format: ${error}` });
-    return;
-  }
-
-  db.collection('issues').find({ _id: issueId }).limit(1)
-  .next()
-  .then(issue => {
-    if (!issue) res.status(404).json({ message: `No such issue: ${issueId}` });
-    else res.json(issue);
   })
   .catch(error => {
     console.log(error);
@@ -147,90 +131,10 @@ app.get('/api/issues/:id', (req, res) => {
   });
 });
 
-app.put('/api/issues/:id', (req, res) => {
-  let issueId;
-  try {
-    issueId = new ObjectId(req.params.id);
-  } catch (error) {
-    res.status(422).json({ message: `Invalid issue ID format: ${error}` });
-    return;
-  }
-
-  const issue = req.body;
-  delete issue._id;
-
-  const err = Issue.validateIssue(issue);
-  if (err) {
-    res.status(422).json({ message: `Invalid request: ${err}` });
-    return;
-  }
-
-  db.collection('issues').updateOne({ _id: issueId }, Issue.convertIssue(issue)).then(() =>
-    db.collection('issues').find({ _id: issueId }).limit(1)
-    .next()
-  )
-  .then(savedIssue => {
-    res.json(savedIssue);
->>>>>>> master
-  })
-  .catch(error => {
-    console.log(error);
-    res.status(500).json({ message: `Internal Server Error: ${error}` });
-  });
-});
-
-<<<<<<< HEAD
 MongoClient.connect('mongodb://localhost/issuetracker').then(connection => {
   db = connection;
   app.listen(3000, () => {
     console.log('App started on port 3000');
-=======
-app.delete('/api/issues/:id', (req, res) => {
-  let issueId;
-  try {
-    issueId = new ObjectId(req.params.id);
-  } catch (error) {
-    res.status(422).json({ message: `Invalid issue ID format: ${error}` });
-    return;
-  }
-
-  db.collection('issues').deleteOne({ _id: issueId }).then((deleteResult) => {
-    if (deleteResult.result.n === 1) res.json({ status: 'OK' });
-    else res.json({ status: 'Warning: object not found' });
-  })
-  .catch(error => {
-    console.log(error);
-    res.status(500).json({ message: `Internal Server Error: ${error}` });
-  });
-});
-
-app.get('/api/users/me', (req, res) => {
-  if (req.session && req.session.user) {
-    res.json(req.session.user);
-  } else {
-    res.json({ signedIn: false, name: '' });
-  }
-});
-
-app.post('/signin', (req, res) => {
-  if (!req.body.id_token) {
-    res.status(400).send({ code: 400, message: 'Missing Token.' });
-    return;
-  }
-  fetch(`https://www.googleapis.com/oauth2/v3/tokeninfo?id_token=${req.body.id_token}`)
-  .then(response => {
-    if (!response.ok) response.json().then(error => Promise.reject(error));
-    response.json().then(data => {
-      req.session.user = {
-        signedIn: true, name: data.given_name,
-      };
-      res.json(req.session.user);
-    });
-  })
-  .catch(error => {
-    console.log(error);
-    res.status(500).json({ message: `Internal Server Error: ${error}` });
->>>>>>> master
   });
 });
 
