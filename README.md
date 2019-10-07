@@ -1,5 +1,9 @@
 ![Pro MERN Stack](https://images.springer.com/sgw/books/medium/9781484226520.jpg)
 
+### Deprecation notice
+
+This github repository, and also the book that it is meant to accompany, have now been superceded by the *second edition* of the book and a corresponding new repository: [pro-mern-stack-2](https://github.com/vasansr/pro-mern-stack). The repository is no longer being maintained, but remains in GitHub as an archive.
+
 This is the complete source code compilation of all code listings in the book
 Pro MERN Stack by Vasan Subramanian, published by Apress. The book can be purchased at any of these websites:
 
