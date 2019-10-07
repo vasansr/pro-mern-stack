@@ -1,6 +1,6 @@
 ### Deprecation notice
 
-This github repository, and also the book that it is meant to accompany, have now been superceded by the *second edition* of the book and a corresponding new repository: [pro-mern-stack-2](https://github.com/vasansr/pro-mern-stack). The repository is no longer being maintained, but remains in GitHub as an archive.
+This github repository, and also the book that it is meant to accompany, have now been superceded by the *second edition* of the book and a corresponding new repository: [pro-mern-stack-2](https://github.com/vasansr/pro-mern-stack-2). The repository is no longer being maintained, but remains in GitHub as an archive.
 
 ![Pro MERN Stack](https://images.springer.com/sgw/books/medium/9781484226520.jpg)
 
